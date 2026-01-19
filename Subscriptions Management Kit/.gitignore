@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Distribution / packaging
+dist/
+build/
+*.spec
+*.egg-info/
+*.egg
+
+# User data (don't commit personal subscriptions)
+subscriptions.db
+*.db
+
+# Logs
+*.log
+app.log
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# PyInstaller
+*.manifest
+*.pem
+
+# Temporary files
+*.tmp
+*.temp
+*.bak

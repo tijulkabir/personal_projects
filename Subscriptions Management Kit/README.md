@@ -1,71 +1,148 @@
 # Subscription Manager — ByteFroster Edition
 
-A sleek desktop app to **manage your digital subscriptions** — built with **Python + PySide6**, by [Tijul Kabir Toha](https://tijulkabir.me).  
-Easily track your services, renewal dates, and remaining days with a minimal, modern UI.
+<div align="center">
+
+![Version](https://img.shields.io/badge/version-2.0.0-00E676?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows)
+
+**A sleek desktop app to manage your digital subscriptions**
+
+*Built with Python + PySide6 by [Tijul Kabir Toha](https://tijulkabir.me)*
+
+</div>
 
 ---
 
-## 🚀 Features
-- ✅ Add, edit, and delete subscriptions  
-- ✅ Track start date, end date, and remaining days  
-- ✅ SQLite storage (no setup required)  
-- ✅ Import / export Excel or CSV  
-- ✅ Custom **ByteFroster** green-black theme + icon  
-- ✅ One-click silent startup (no console pop-up)
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 📋 **CRUD Operations** | Add, edit, and delete subscriptions with ease |
+| 📅 **Date Tracking** | Track start dates, end dates, and days remaining |
+| 🏷️ **Categories** | Organize subscriptions by type (Streaming, Music, Software, etc.) |
+| 🔍 **Search & Filter** | Quickly find subscriptions by name or category |
+| 🎨 **Status Colors** | Visual indicators — 🟢 Active, 🟡 Expiring Soon, 🔴 Expired |
+| 📥 **Import/Export** | Excel and CSV support for bulk operations |
+| 💾 **SQLite Backend** | Local database, no cloud required |
+| ⌨️ **Keyboard Shortcuts** | Ctrl+N, Delete, F5, and more |
+| 📝 **Logging** | Debug logs stored in AppData |
 
 ---
 
-## ⚙️ Requirements
+## 🚀 Quick Start
 
-- **Python 3.10+**
-- Install dependencies:
-```bash
-pip install -r requirements.txt
----
+### One-Click Installation (Windows)
 
-##  Run Instructions
+1. **Download** or clone this repository
+2. **Double-click** `install.bat`
+3. **Done!** A desktop shortcut will be created
 
-###  Option 1 — Direct Run
-```bash
-python subscription_manager.py
-Option 2 — Silent Mode (no CMD popup)
-
-Step 1 — Allow local scripts:
-
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-
-
-Step 2 — Create a shortcut:
-
-.\create_shortcut.ps1
-
-
-This creates a desktop shortcut: Subscription Manager.lnk
-Double-click it to launch your app silently with your custom icon.
-Folder Layout
-Subscription_Management/
-├── subscription_manager.py     # Main application
-├── run_silent.vbs              # Silent launcher (no CMD)
-├── create_shortcut.ps1         # Shortcut creator script
-├── bytefroster.ico             # Custom icon
-├── requirements.txt            # Dependencies
-├── README.md                   # Project documentation
-└── .gitignore                  # Git ignore rules
+```batch
+# Or from command line:
+install.bat
 ```
+
+### Manual Installation
+
 ```bash
-Language: Python
-GUI Framework: PySide6 (Qt for Python)
-Database: SQLite
-Data Handling: Pandas, OpenPyXL
-Launcher: VBS + PowerShell integration
+# Clone the repository
+git clone https://github.com/tijulkabir/personal_projects.git
+cd "personal_projects/Subscriptions Management Kit"
 
-👨‍💻 Author
+# Create virtual environment
+python -m venv .venv
 
-Tijul Kabir Toha (Froster)
-🎓 BSc in CSE @ PUST, Bangladesh
-💀 Cybersecurity & Competitive Programming Enthusiast
+# Activate it
+.venv\Scripts\activate  # Windows
+# source .venv/bin/activate  # Linux/Mac
 
-🪪 License
+# Install dependencies
+pip install -r requirements.txt
 
-This project is open-source under the MIT License.
+# Run the app
+python subscription_manager.py
+```
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl+N` | New subscription |
+| `Ctrl+I` | Import Excel/CSV |
+| `Ctrl+E` | Export to Excel |
+| `Delete` | Delete selected |
+| `F5` | Refresh table |
+| `F1` | About dialog |
+| `Escape` | Cancel editing |
+
+---
+
+## 📁 Project Structure
+
+```
+Subscriptions Management Kit/
+├── subscription_manager.py   # Main application (v2.0.0)
+├── install.bat               # One-click Windows installer
+├── run_silent.vbs            # Silent launcher (no console)
+├── run.cmd                    # Command-line launcher
+├── create_shortcut.ps1       # PowerShell shortcut creator
+├── requirements.txt          # Python dependencies
+├── bytefroster.ico          # Custom application icon
+└── README.md                 # This file
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language:** Python 3.10+
+- **GUI Framework:** PySide6 (Qt for Python)
+- **Database:** SQLite
+- **Data Handling:** Pandas, OpenPyXL
+
+---
+
+## 📊 Data Location
+
+Your subscription data is stored locally:
+
+| OS | Location |
+|----|----------|
+| Windows | `%LOCALAPPDATA%\SubscriptionManager\` |
+| macOS | `~/Library/Application Support/SubscriptionManager/` |
+| Linux | `~/.local/share/SubscriptionManager/` |
+
+Files stored:
+- `subscriptions.db` — SQLite database
+- `config.json` — User preferences
+- `app.log` — Application logs
+
+---
+
+## 👨‍💻 Author
+
+**Tijul Kabir Toha** (Froster)
+
+- 🎓 BSc in CSE @ PUST, Bangladesh
+- 💀 Cybersecurity & Competitive Programming Enthusiast
+- 🌐 [tijulkabir.me](https://tijulkabir.me)
+- 📂 [GitHub](https://github.com/tijulkabir)
+
+---
+
+## 📜 License
+
+This project is open-source under the **MIT License**.  
 You are free to modify and distribute it — just give credit to the original author.
+
+---
+
+<div align="center">
+
+Made with 💚 by ByteFroster
+
+</div>
